@@ -13,7 +13,7 @@ dist-ssr
 *.local
 
 #templates
-_template.tsx
+/src/components/_template.tsx
 
 # Editor directories and files
 .vscode/*
