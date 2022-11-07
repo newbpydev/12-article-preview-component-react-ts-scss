@@ -1,8 +1,13 @@
 import { useState } from "react";
 import "./App.scss";
+import ArticlePreview from "./components/ArticlePreview/ArticlePreview";
 
 function App() {
-  return <div className="App">text_all_here</div>;
+  return (
+    <div className="App">
+      <ArticlePreview />
+    </div>
+  );
 }
 
 export default App;

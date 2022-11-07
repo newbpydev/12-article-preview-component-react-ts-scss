@@ -33,10 +33,14 @@ We provide SVGs for the social icons. But please feel free to use a font icon li
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
 
 :root {
-  --blue-grayish-very-dark: hsl(217, 19%, 35%);
-  --blue-desaturated-dark: hsl(214, 17%, 51%);
-  --blue-grayish: hsl(212, 23%, 69%);
-  --blue-grayish-light: hsl(210, 46%, 95%);
+  --blue-grayish-very-dark: #48556a;
+  /* #48556a */
+  --blue-desaturated-dark: #6d7f97;
+  /* #6d7f97 */
+  --blue-grayish: #9eafc2;
+  /* #9eafc2 */
+  --blue-grayish-light: #ecf2f8;
+  /* #ecf2f8 */
 }
 
 html {
@@ -47,9 +51,17 @@ body {
   font-family: 'Manrope';
   font-size: 1.3rem;
   font-weight: 500;
+  color: var(--blue-desaturated-dark);
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
   place-content: center;
   place-items: center;
+
+  background: var(--blue-grayish-light)
+}
+
+p {
+  line-height: 2rem;
+  letter-spacing: .121875px;
 }
