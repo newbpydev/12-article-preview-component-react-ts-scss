@@ -1,4 +1,4 @@
-import React from "react";
+import React, { MouseEventHandler, useState } from "react";
 import SocialPopUp from "../SocialPopUp/SocialPopUp";
 
 import drawer from "../../assets/images/drawers.jpg";
@@ -9,6 +9,39 @@ import styles from "./ArticlePreview.module.scss";
 
 export default function ArticlePreview() {
   // * SCRIPT
+  const [shareButtonIsActive, setShareButtonIsActive] = useState(false);
+
+  const handleClick: MouseEventHandler = (e) => {
+    setShareButtonIsActive(!shareButtonIsActive);
+  };
+
+  const renderAuthor = (
+    <>
+      <picture className={styles["article-card__avatar-frame"]}>
+        <img
+          className={styles["article-card__avatar-img"]}
+          src={avatar}
+          alt="image of the author"
+        />
+      </picture>
+
+      <div className={styles["article-card__author-info"]}>
+        <h3 className={styles["article-card__author-name"]}>
+          Michelle Appleton
+        </h3>
+        <p className={styles["article-card__date"]}>28 Jun 2020</p>
+      </div>
+
+      <button
+        className={styles["article-card__share-button"]}
+        title="click to share on social media"
+        onClick={handleClick}
+      >
+        <i className="fa-solid fa-share"></i>
+      </button>
+    </>
+  );
+
   return (
     // * TEMPLATE
     <article className={styles["article-card"]}>
@@ -32,7 +65,13 @@ export default function ArticlePreview() {
         </p>
 
         <div className={styles["article-card__published-info"]}>
-          <picture className={styles["article-card__avatar-frame"]}>
+          {shareButtonIsActive ? (
+            <SocialPopUp onClickHandler={handleClick} />
+          ) : (
+            renderAuthor
+          )}
+
+          {/* <picture className={styles["article-card__avatar-frame"]}>
             <img
               className={styles["article-card__avatar-img"]}
               src={avatar}
@@ -52,7 +91,7 @@ export default function ArticlePreview() {
             title="click to share on social media"
           >
             <i className="fa-solid fa-share"></i>
-          </button>
+          </button> */}
 
           {/* share button */}
           {/* <SocialPopUp /> */}
