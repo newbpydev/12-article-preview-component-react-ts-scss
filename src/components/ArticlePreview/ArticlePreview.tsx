@@ -47,14 +47,12 @@ export default function ArticlePreview() {
             <p className={styles["article-card__date"]}>28 Jun 2020</p>
           </div>
 
-          <div className="article-card__share-button-wrapper" role="button">
-            <img
-              className={styles["article-card__share-button"]}
-              src={shareIcon}
-              alt="clickable image to open the share on social media icons"
-              aria-label="Click here to share on social media."
-            />
-          </div>
+          <button
+            className={styles["article-card__share-button"]}
+            title="click to share on social media"
+          >
+            <i className="fa-solid fa-share"></i>
+          </button>
 
           {/* share button */}
           {/* <SocialPopUp /> */}
