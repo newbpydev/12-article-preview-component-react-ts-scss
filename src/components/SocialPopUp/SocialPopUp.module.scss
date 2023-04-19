@@ -1,3 +1,40 @@
 .social-popup {
-  background-color: black;
+  background-color: var(--blue-grayish-very-dark);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 6.4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.2rem;
+
+  &__left-items {
+    display: flex;
+    width: 17.5rem;
+    justify-content: space-between;
+
+    & .social-popup__heading {
+      text-transform: uppercase;
+      letter-spacing: .5rem;
+      line-height: 2rem;
+    }
+
+    & .social-popup__social-link {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  &__right-items {
+    background-color: var(--blue-desaturated-);
+
+    & .social-popup__share-icon>img {
+      height: 2rem;
+      width: 2rem;
+      fill: green;
+      // fill: var(--blue-desaturated-dark)
+    }
+  }
 }

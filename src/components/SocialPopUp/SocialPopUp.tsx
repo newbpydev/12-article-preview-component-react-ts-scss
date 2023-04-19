@@ -14,38 +14,43 @@ interface Props {
 export default function SocialPopUp({ onClickHandler }: Props) {
   return (
     <div className={styles["social-popup"]}>
-      <h2 className={styles["social-popup__heading"]}>Share</h2>
+      <div className={styles["social-popup__left-items"]}>
+        <h2 className={styles["social-popup__heading"]}>Share</h2>
+        <a
+          href="https://facebook.com"
+          className={styles["social-popup__social-link"]}
+          aria-label="click to share on facebook"
+          target="blank"
+        >
+          <img src={facebookLogo} alt="facebook icon link" />
+        </a>
+        <a
+          href="https://twitter.com"
+          className={styles["social-popup__social-link"]}
+          aria-label="click to share on twitter"
+          target="blank"
+        >
+          <img src={twitterLogo} alt="twitter icon link" />
+        </a>
+        <a
+          href="https://pinterest.com"
+          className={styles["social-popup__social-link"]}
+          aria-label="click to share on pinterest"
+          target="blank"
+        >
+          <img src={pinterestLogo} alt="pinterest icon link" />
+        </a>
+      </div>
 
-      <a
-        href="https://facebook.com"
-        className={styles["social-popup__social-link"]}
-        aria-label="click to share on facebook"
-        target="blank"
-      >
-        <img src={facebookLogo} alt="facebook icon link" />
-      </a>
-
-      <a
-        href="https://twitter.com"
-        className={styles["social-popup__social-link"]}
-        aria-label="click to share on twitter"
-        target="blank"
-      >
-        <img src={twitterLogo} alt="twitter icon link" />
-      </a>
-
-      <a
-        href="https://pinterest.com"
-        className={styles["social-popup__social-link"]}
-        aria-label="click to share on pinterest"
-        target="blank"
-      >
-        <img src={pinterestLogo} alt="pinterest icon link" />
-      </a>
-
-      <a href="#" onClick={onClickHandler}>
-        <img src={shareIcon} alt="Share icon" />
-      </a>
+      <div className={styles["social-popup__right-items"]}>
+        <a
+          href="#"
+          onClick={onClickHandler}
+          className={styles["social-popup__share-icon"]}
+        >
+          <img src={shareIcon} alt="Share icon" />
+        </a>
+      </div>
     </div>
   );
 }

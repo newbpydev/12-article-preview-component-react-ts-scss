@@ -5,6 +5,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  position: relative;
+  box-shadow: 0rem 4rem 4rem -1rem rgba(201, 213, 225, 0.5);
 
   &__picture-frame {
     width: 100%;
@@ -42,6 +44,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 4rem;
+    // position: relative;
   }
 
   &__avatar-frame {
