@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 3.2rem;
+  padding: 1.6rem 3.2rem;
 
   &__left-items {
     display: flex;
@@ -28,13 +28,20 @@
   }
 
   &__right-items {
-    background-color: var(--blue-desaturated-);
+    background-color: var(--blue-desaturated-dark);
+    border-radius: 50%;
+    height: 3.2rem;
+    width: 3.2rem;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 
-    & .social-popup__share-icon>img {
-      height: 2rem;
-      width: 2rem;
-      fill: green;
-      // fill: var(--blue-desaturated-dark)
-    }
+    // & .social-popup__share-icon img {
+    //   filter: grayscale(100%) brightness(0%) saturate(100%) hue-rotate(0deg);
+    // }
+    & .social-popup__share-svg {}
+
   }
 }

@@ -5,6 +5,7 @@ import pinterestLogo from "../../assets/images/icon-pinterest.svg";
 import shareIcon from "../../assets/images/icon-share.svg";
 
 import styles from "./SocialPopUp.module.scss";
+import Icon from "../Icon/Icon";
 
 //* Types
 interface Props {
@@ -42,13 +43,12 @@ export default function SocialPopUp({ onClickHandler }: Props) {
         </a>
       </div>
 
-      <div className={styles["social-popup__right-items"]}>
-        <a
-          href="#"
-          onClick={onClickHandler}
-          className={styles["social-popup__share-icon"]}
-        >
-          <img src={shareIcon} alt="Share icon" />
+      <div
+        className={styles["social-popup__right-items"]}
+        onClick={onClickHandler}
+      >
+        <a href="#" className={styles["social-popup__share-icon"]}>
+          <Icon color="#fff" className={styles["social-popup__share-svg"]} />
         </a>
       </div>
     </div>
