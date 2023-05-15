@@ -4,9 +4,9 @@ import ArticlePreview from "./components/ArticlePreview/ArticlePreview";
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
       <ArticlePreview />
-    </div>
+    </main>
   );
 }
 

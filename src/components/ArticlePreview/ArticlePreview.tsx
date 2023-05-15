@@ -25,9 +25,9 @@ export default function ArticlePreview() {
       </picture>
 
       <div className={styles["article-card__author-info"]}>
-        <h3 className={styles["article-card__author-name"]}>
+        <h2 className={styles["article-card__author-name"]}>
           Michelle Appleton
-        </h3>
+        </h2>
         <p className={styles["article-card__date"]}>28 Jun 2020</p>
       </div>
 
