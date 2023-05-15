@@ -43,14 +43,16 @@ export default function SocialPopUp({ onClickHandler }: Props) {
         </a>
       </div>
 
-      <div
-        className={styles["social-popup__right-items"]}
-        onClick={onClickHandler}
-      >
-        <a href="#" className={styles["social-popup__share-icon"]}>
-          <Icon color="#fff" className={styles["social-popup__share-svg"]} />
-        </a>
-      </div>
+      {window.innerWidth < 1024 && (
+        <div
+          className={styles["social-popup__right-items"]}
+          onClick={onClickHandler}
+        >
+          <a href="#" className={styles["social-popup__share-icon"]}>
+            <Icon color="#fff" className={styles["social-popup__share-svg"]} />
+          </a>
+        </div>
+      )}
     </div>
   );
 }

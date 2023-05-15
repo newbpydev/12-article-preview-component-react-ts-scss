@@ -66,7 +66,14 @@ export default function ArticlePreview() {
 
         <div className={styles["article-card__published-info"]}>
           {shareButtonIsActive ? (
-            <SocialPopUp onClickHandler={handleClick} />
+            window.innerWidth < 1024 ? (
+              <SocialPopUp onClickHandler={handleClick} />
+            ) : (
+              <>
+                <SocialPopUp onClickHandler={handleClick} />
+                {renderAuthor}
+              </>
+            )
           ) : (
             renderAuthor
           )}
