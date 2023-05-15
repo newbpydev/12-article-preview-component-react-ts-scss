@@ -85,31 +85,6 @@ export default function ArticlePreview() {
 
         <div className={styles["article-card__published-info"]}>
           {renderShareButtons}
-
-          {/* <picture className={styles["article-card__avatar-frame"]}>
-            <img
-              className={styles["article-card__avatar-img"]}
-              src={avatar}
-              alt="image of the author"
-            />
-          </picture>
-
-          <div className={styles["article-card__author-info"]}>
-            <h3 className={styles["article-card__author-name"]}>
-              Michelle Appleton
-            </h3>
-            <p className={styles["article-card__date"]}>28 Jun 2020</p>
-          </div>
-
-          <button
-            className={styles["article-card__share-button"]}
-            title="click to share on social media"
-          >
-            <i className="fa-solid fa-share"></i>
-          </button> */}
-
-          {/* share button */}
-          {/* <SocialPopUp /> */}
         </div>
       </div>
     </article>
