@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useState } from "react";
+import { MouseEventHandler, useState } from "react";
 import SocialPopUp from "../SocialPopUp/SocialPopUp";
 
 import drawer from "../../assets/images/drawers.jpg";
@@ -8,7 +8,6 @@ import avatar from "../../assets/images/avatar-michelle.jpg";
 import styles from "./ArticlePreview.module.scss";
 
 export default function ArticlePreview() {
-  // * SCRIPT
   const [shareButtonIsActive, setShareButtonIsActive] = useState(false);
 
   const handleClick: MouseEventHandler = (e) => {
@@ -34,16 +33,36 @@ export default function ArticlePreview() {
 
       <button
         className={styles["article-card__share-button"]}
+        style={{
+          backgroundColor: shareButtonIsActive
+            ? "var(--blue-desaturated-dark)"
+            : "",
+        }}
         title="click to share on social media"
         onClick={handleClick}
       >
-        <i className="fa-solid fa-share"></i>
+        <i
+          className={"fa-solid fa-share "}
+          style={{ color: shareButtonIsActive ? "white" : "" }}
+        ></i>
       </button>
     </>
   );
 
+  const renderShareButtons = shareButtonIsActive ? (
+    window.innerWidth < 1024 ? (
+      <SocialPopUp onClickHandler={handleClick} />
+    ) : (
+      <>
+        <SocialPopUp onClickHandler={handleClick} />
+        {renderAuthor}
+      </>
+    )
+  ) : (
+    renderAuthor
+  );
+
   return (
-    // * TEMPLATE
     <article className={styles["article-card"]}>
       <picture className={styles["article-card__picture-frame"]}>
         <img
@@ -65,18 +84,7 @@ export default function ArticlePreview() {
         </p>
 
         <div className={styles["article-card__published-info"]}>
-          {shareButtonIsActive ? (
-            window.innerWidth < 1024 ? (
-              <SocialPopUp onClickHandler={handleClick} />
-            ) : (
-              <>
-                <SocialPopUp onClickHandler={handleClick} />
-                {renderAuthor}
-              </>
-            )
-          ) : (
-            renderAuthor
-          )}
+          {renderShareButtons}
 
           {/* <picture className={styles["article-card__avatar-frame"]}>
             <img
