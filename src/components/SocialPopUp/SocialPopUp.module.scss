@@ -25,7 +25,7 @@
       content: "";
       position: absolute;
       bottom: -9.5px;
-      /* Adjust the distance from the top as needed */
+
       left: 50%;
       transform: translateX(-50%) rotate(180deg);
       width: 0;
@@ -34,7 +34,7 @@
       border-right: 12px solid transparent;
       border-bottom: 10px solid var(--blue-grayish-very-dark);
 
-      /* Adjust the color and size as needed */
+
     }
   }
 
@@ -66,10 +66,7 @@
     align-items: center;
     cursor: pointer;
 
-    // & .social-popup__share-icon img {
-    //   filter: grayscale(100%) brightness(0%) saturate(100%) hue-rotate(0deg);
-    // }
-    & .social-popup__share-svg {}
+
 
   }
 }
